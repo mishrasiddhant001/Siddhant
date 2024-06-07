@@ -1,0 +1,93 @@
+.icon {
+  margin-top: 2rem;
+  margin-right: 1rem;
+  font-size: 3rem;
+}
+
+.head {
+  color: var(--color-primary);
+  display: flex;
+  margin-top: -26rem;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-right: 10px;
+}
+
+.container.institution_container {
+  width: 40%;
+  margin-top: -15rem;
+  margin-left: 30rem;
+  padding-bottom: 4rem;
+}
+
+.swiper-pagination-bullet .swiper-pagination-bullet-active{
+  background: var(--color-primary);
+}
+
+.avatar {
+  width: 15rem;
+  aspect-ratio: 1/1;
+  overflow: hidden;
+  border-radius: 2rem;
+  margin: 0 auto 1rem;
+  border: 0.4rem solid var(--color-primary-variant);
+}
+
+.institution {
+  background: var(--color-bg-variant);
+  text-align: center;
+  padding: 2rem;
+  border-radius: 2rem;
+  user-select: none;
+}
+
+.details {
+  color: var(--color-light);
+  font-weight: 300;
+  display: block;
+  width: 80%;
+  margin: 0.8rem auto 0;
+  font-size: 1rem;
+}
+
+
+/*====================MEDIA QUERY (TABLETS OR MEDIUM DEVICE) ==================================*/
+
+@media screen and (max-width: 1024px) {
+  #education {
+    margin-top: -45rem;
+  }
+  .container.institution_container {
+    width: 60%;
+    margin-left: 10rem;
+    margin-top: -30rem;
+  }
+
+  .head {
+    margin-top: -2rem; /* Adjust the margin for tablets */
+  }
+}
+
+  
+  /*====================MEDIA QUERY (MOBILE OR SMALL DEVICE) ==================================*/
+  
+  @media screen and (max-width: 600px) {
+    #education {
+      margin-top: 10rem; /* Adjust top margin to position the education section */
+    }
+    .head {
+      margin-top: 1rem; /* Adjust the margin for mobile devices */
+    }
+    .container.institution_container {
+      margin-top: -20rem;
+      width: var(--container-width-sm); /* Adjust the width of the container */
+      margin-left: auto; /* Center the container */
+      margin-right: auto;
+    }
+    .details {
+      width: var(--container-width-sm);
+      /* Add any necessary styles to further adjust alignment and presentation */
+    }
+  }
+  

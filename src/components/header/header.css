@@ -1,0 +1,109 @@
+ header{
+    height: 100vh;
+    padding-top: 3rem;
+    overflow: hidden;
+ }
+
+ h1 {
+    color: var(--color-primary);
+    text-align: center; /* Center the text horizontally */
+    margin-top: 1rem; /* Add margin to center the text vertically */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+  }
+  
+ .header__container{
+    text-align: center;
+    height: 100%;
+    position: relative;
+ }
+  h1 {
+    color: var(--color-primary);
+  }
+/* =====================CTA========================= */
+.cta{
+    margin-top: 2.5rem;
+    display: flex;
+    gap: 1.1rem;
+    justify-content: center;
+}
+/* =====================SOCIALS========================= */
+
+.Socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: absolute;
+    left: 3rem;
+    bottom: 3rem;
+}
+
+/* .Socials{
+    content: '';
+    width: 1px;
+    height: 2rem;
+    background: var(--color-primary); 
+} */
+
+/* =====================img========================= */
+.me {
+    background: linear-gradient(var(--color-primary), transparent);
+    width: 20rem;
+    height: 20rem; /* Equal width and height to create a circle */
+    position: absolute;
+    left: calc(50% - 10rem);
+    margin-top: 3rem;
+    border-radius: 50%; /* Make it a full circle */
+    overflow: hidden;
+    padding: 5rem 1.5rem 1.5rem 1.5em;
+}
+
+/* ====================Scroll================== */
+.scroll_down{
+    position: absolute;
+    right: 0.5rem;
+    bottom: 5rem;
+    transform: rotate(90deg);
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+/*====================MEDIA QUERY (TABLETS OR MEDIUM DEVICE) ==================================*/
+/* Updated styles for .Socials and .scroll_down on tablets */
+@media screen and (max-width: 1024px) {
+    .Socials {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* Align to the left */
+      gap: 0.5rem;
+      position: absolute;
+      left: 3rem;
+      bottom: 33rem;
+    }
+  
+    .scroll_down {
+      position: absolute;
+      right: 0.5rem;
+      bottom: 3rem; /* Adjust the bottom value to position it properly */
+      transform: rotate(90deg);
+      font-weight: 300;
+      font-size: 0.9rem;
+      bottom: 35rem;
+    }
+  }
+  
+
+
+/*====================MEDIA QUERY (MBILES OR SMALL DEVICE) ==================================*/
+
+@media screen and (max-width: 600px){
+    header{
+        height: 100vh;
+    }
+    .Socials,.scroll_down{
+        display: none;
+    }
+}

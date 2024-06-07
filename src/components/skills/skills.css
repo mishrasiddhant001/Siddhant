@@ -1,0 +1,103 @@
+.about__skills {
+    margin-top: 4.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  .skills_icon {
+    background: var(--color-bg-variant);
+    border: 1px solid transparent;
+    border-radius: 50%;
+    width: 155px;
+    height: 155px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: var(--transition);
+    margin-bottom: 1.5rem;
+    margin-left: 2.45rem;
+    display: flex;
+    flex-direction: column;/* To make text appear below the icon */
+    justify-content: center;/* Center text vertically */
+    align-items: center;/* Center text horizontally */
+  }
+  
+  .skills_icon:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+    cursor: default;
+  }
+  
+  .skills_icon h5 {
+    font-size: 1rem; /* Adjust font size for the circle */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .about_icon_except {
+    font-size: smaller !important;
+    margin: 0;
+  }
+  
+  .about__icon {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  /*====================MEDIA QUERY (TABLETS OR MEDIUM DEVICE) ==================================*/
+  
+  @media screen and (max-width: 1024px) {
+    .about__skills {
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    }
+    .skills_icon {
+      width: 130px;
+      height: 130px;
+      padding: 1rem;
+      margin-left: 1.5rem;
+    }
+    .skills_icon h5 {
+      font-size: 0.9rem; /* Adjust font size for tablets */
+    }
+    .about_icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.8rem;
+    }
+    .about__skills.about_icon_except {
+      font-size: 10% !important;
+    }
+  }
+  
+  /*====================MEDIA QUERY (MOBILE OR SMALL DEVICE) ==================================*/
+  
+  @media screen and (max-width: 600px) {
+    #skills {
+      align-items: center;
+      margin-top: 64rem;
+      margin-left: 2.8rem;
+    }
+  
+    .about__skills {
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .skills_icon {
+      width: 100px;
+      height: 100px;
+      padding: 0.7rem;
+      margin-left: 0.5rem;
+    }
+    .skills_icon h5 {
+      font-size: 0.8rem; /* Adjust font size for mobile devices */
+    }
+    .about_icon {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .about__skills {
+      margin-top: 2rem;
+    }
+    .about_icon_except {
+      font-size: 10% !important;
+    }
+  }
+  
