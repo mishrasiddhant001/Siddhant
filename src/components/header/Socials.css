@@ -1,0 +1,24 @@
+.first {
+    position: relative; /* Ensure .Socials is positioned relative to the parent */
+}
+
+.Socials {
+    display: flex;
+    flex-direction: column; /* Stack the icons vertically */
+    gap: 10px; /* Add spacing between the icons */
+    position: absolute;
+    bottom: 20px; /* Padding from the bottom */
+    left: 20px; /* Padding from the left */
+    align-items: flex-start; /* Align items to the start */
+}
+
+.Socials a {
+    font-size: 2em; /* Adjust size of icons */
+    color: #fff; /* White color for icons */
+    transition: transform 0.3s ease, color 0.3s ease; /* Add hover animations */
+}
+
+.Socials a:hover {
+    transform: scale(1.5); /* Enlarge icons slightly on hover */
+    color:white; /* Change color on hover */
+}

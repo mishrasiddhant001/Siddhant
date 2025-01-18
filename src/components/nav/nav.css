@@ -1,33 +1,61 @@
-nav{
-    background: rgba(0,0,0,0.5);
-    width: max-content;
-    display: block;
-    padding: 0.7rem 1.7rem;
-    z-index: 2;
-    position: fixed;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: 2rem;
-    display: flex;
-    gap: 0.8rem;
-    border-radius: 3rem;
-    backdrop-filter: blur(8);
+.navbar {
+  background-color: transparent;
+  padding-left: 18px;
+  padding-top: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  align-items: center; /* Align items vertically in the center */
+  justify-content: space-between; /* Space between logo and nav links */
 }
 
-nav a{
-    background: transparent;
-    padding: 0.9rem;
-    border-radius: 50%;
-    display: flex;
-    color: var(--color-light);
-    font-size: 1.1rem;
+.navbar-logo-link {
+  display: inline-block;
+  transition: transform 0.3s ease;
 }
 
-nav a:hover{
-    background: rgba(0,0,0,0.3);
+.navbar-logo {
+  height: 60px;
+  width: 60px;
 }
 
-nav a.active{
-    background: var(--color-primary);
-    color: var(--color-bg);
+/* .navbar-logo-link:hover .navbar-logo {
+  transform: scale(1.35); /* Adds a scaling effect on hover */
+
+.navbar-links {
+  list-style-type: none;
+  display: flex;
+  height: 100%; /* Make navbar-links container fill the navbar height */
+  justify-content: center; /* Center the navigation links horizontally */
+  align-items: center; /* Center the navigation links vertically */
+  flex-grow: 1; /* Allow the nav links to occupy the center space */
+  margin: 0;
+  padding-right: 78px;
 }
+
+.navbar-links li {
+  margin: 0 10px; /* Add spacing between items */
+}
+
+.navbar-links a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 8px 16px;
+  font-size: 18px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.navbar-links a:hover {
+  font-weight: bolder;
+  transform: scale(1.4);
+  border-radius: 4px;
+
+}.navbar-links a.active {
+  transform: scale(1.5); /* Slightly larger */
+  font-weight: bolder;
+}
+

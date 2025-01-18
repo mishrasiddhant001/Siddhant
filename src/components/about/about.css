@@ -2,8 +2,10 @@
     padding-left: 5rem;
     display: grid;
     grid-template-columns: 35% 50%;
-    gap: 15%;
+    gap: 18rem;
     padding-right: 5rem;
+    justify-items: center;
+    /* align-items: center; */
 }
 
 .about__me {
@@ -14,7 +16,7 @@
         linear-gradient(
             45deg,
             transparent,
-            var(--color-primary),
+            white,
             transparent
         );
     display: grid;
@@ -30,7 +32,7 @@
 }
 
 .about_head h1 {
-    color: var(--color-primary);
+    color: white;
     font-size: 2rem;
     margin-top: 0.1rem;
 }
@@ -46,27 +48,66 @@
     transform: rotate(0); /* Remove rotation on hover */
 }
 
-.about__cards {
+/* .about__cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
+} */
+
+.about__cards {
+    display: flex; /* Aligns items horizontally */
+    justify-content: space-around; /* Evenly spaces the cards */
+    align-items: center; /* Aligns items vertically in case of height differences */
+    gap: 1rem; /* Adds spacing between cards */
+    margin: 20px 0; /* Adds spacing above and below the card row */
 }
 
 .about__card {
-    background: var(--color-bg-variant);
-    border: 1px solid transparent;
-    border-radius: 1rem;
-    padding: 1.5rem; /* Reduced padding */
-    text-align: center;
-    transition: var(--transition);
-    margin-bottom: 1.5rem; /* Increased margin at the bottom */
+    
+    background:  rgba(31,31,56,255); /* Light gray background */
+    border: 1px solid #e0e0e0; /* Subtle border for definition */
+    border-radius: 6px; /* Slightly rounded corners */
+    padding: 10px; /* Adds space inside the card */
+    width: 200px; /* Smaller width for compact appearance */
+    height: 100px; /* Smaller height for compact appearance */
+    display: flex; /* Flexbox for alignment */
+    flex-direction: column; /* Stacks content vertically */
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    text-align: center; /* Centers text inside the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
 }
 
 .about__card:hover {
+    transform: translateY(-3px); /* Slight lift on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+.about_icon {
+    font-size: 1.7rem; /* Smaller icon size */
+    color: white; /* Use theme primary color for icons */
+    margin-bottom: 5px; /* Adds spacing below the icon */
+}
+
+.about__card h5 {
+    font-size: 1.1rem; /* Smaller heading size */
+    margin: 0 0 5px; /* Adds spacing below the heading */
+    color: white; /* Dark gray color for text */
+}
+
+
+.about__card small {
+    font-size: 1rem; /* Slightly smaller text */
+    color: white; /* Lighter gray for subtle emphasis */
+}
+
+
+/* .about__card:hover {
     background: transparent;
     border-color: var(--color-primary-variant);
     cursor: default;
-}
+} */
 
 .about__head h5 {
     text-align: center;
@@ -74,31 +115,78 @@
 }
 
 .about__icon {
-    color: var(--color-primary);
+    color: white;
     font-size: 1.2rem; /* Slightly reduced icon size */
     margin-bottom: 1rem;
 }
 
-.about__card h5 {
-    font-size: 0.9rem; /* Reduced font size */
+.image {
+    border-radius: 50%; /* Makes the corners fully round */
+    height:450px; /* Adjusted size for consistency */
+    width: 450px;
+    margin-top: 12px;
+    margin-left: 160px; /* Moves the image more to the right */
+    overflow: hidden; /* Ensures the image stays within the rounded border */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
+.image img {
+    height: 100%; /* Zooms out slightly by increasing the image height */
+    width: 100%; /* Matches zoom out with width */
+    object-fit: cover; /* Ensures the image fits perfectly in the circular container */
+}
+
+
+
 
 .about__card small {
     font-size: 0.7rem;
     color: var(--color-light);
-}
+} */
 
 .about__content {
     margin: 1.2rem 0; /* Increased margin between the paragraph and cards */
+    
+}
+
+.hover-effect {
+    color: white;
+    background-color: rgba(31,31,56,255);
+  }
+  
+.hover-effect {
+    transition: transform 0.5s ease; /* Smooth transition for both hover-in and hover-out */
+}
+
+.hover-effect:hover {
+    transform: scale(1.35); /* Hover effect */
 }
 
 .about__paragraph {
-    background-color: rgba(71,181,255,0.4);
-    font-size: 1.2rem; /* Slightly reduced icon size */
-    margin: 1.5rem 0; /* Increased margin between the paragraph and "Let's Talk" button */
-    border-radius: 2rem; /* Added border radius */
-    border: 2px solid var(--color-primary-variant); /* Added border */
-    text-align: center;
+    /* background: #f2f3f4; Light gray background for a subtle look */
+    color: #aba8a8; /* Dark gray text for readability without high contrast */
+    padding: 20px 40px; /* Adds generous horizontal padding for width */
+    border-radius: 8px; /* Smooth corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Soft shadow for subtle depth */
+    margin: 20px auto; /* Adds spacing above and centers the block */
+    margin-left: -70px;
+    width: 190%; /* Increases the width of the block */
+    max-width: 900px; /* Restricts the width on larger screens */
+    line-height: 1.6; /* Improves text readability */
+    font-size: 1rem; /* Standard font size */
+    text-align: justify; /* Aligns text for a clean look */
+    background-color: rgba(31,31,56,255);
+}
+
+.about__paragraph p {
+    margin: 0; /* Removes default margin */
+}
+
+.about__paragraph p strong {
+    color: #ffffff; /* Highlights key text in a darker gray */
+    font-weight: 600; /* Adds slight emphasis to strong text */
 }
 
 
@@ -131,10 +219,10 @@
     #about{
         margin-top: -5rem;
     }
-    .about__cards{
+    /* .about__cards{
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
-    }
+    } */
 
     .about__content{
         text-align: center;

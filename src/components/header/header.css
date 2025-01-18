@@ -1,109 +1,78 @@
- header{
-    height: 100vh;
-    padding-top: 3rem;
-    overflow: hidden;
- }
-
- h1 {
-    color: var(--color-primary);
-    text-align: center; /* Center the text horizontally */
-    margin-top: 1rem; /* Add margin to center the text vertically */
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-  }
-  
- .header__container{
-    text-align: center;
-    height: 100%;
-    position: relative;
- }
-  h1 {
-    color: var(--color-primary);
-  }
-/* =====================CTA========================= */
-.cta{
-    margin-top: 2.5rem;
-    display: flex;
-    gap: 1.1rem;
-    justify-content: center;
-}
-/* =====================SOCIALS========================= */
-
-.Socials{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    position: absolute;
-    left: 3rem;
-    bottom: 3rem;
+.container {
+  margin-top: 75px;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
 }
 
-/* .Socials{
-    content: '';
-    width: 1px;
-    height: 2rem;
-    background: var(--color-primary); 
-} */
+.first {
+  width: 6%; /* Vertical strip width for socials */
+  padding-left: 0px; /* Add left padding for socials */
+  display: flex;
+  margin: auto;
+  padding-top: 600px;
 
-/* =====================img========================= */
+  flex-direction: column; /* Align socials vertically */
+  justify-content: center; /* Center vertically */
+  position: relative; /* Add positioning */
+  left: -92px; /* Adjust as needed to move left */
+}
+
+.header {
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); Soft shadow for subtle depth */
+  /* background-color: rgba(31,31,56,255); */
+  margin-top: 230px; /* Adjust spacing from top */
+  width: 47%;
+  /* padding: 0 15px; */
+  margin-left: 5%; /* Add space between socials and header */
+}
+
+.text-light b {
+  display: inline-block;
+  opacity: 0;
+  animation: fade-in 0.5s ease-in-out forwards;
+  font-weight: bolder;
+  font-size: larger;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.cta {
+  display: flex;
+  gap: 2rem; /* Adjust the value to control spacing */
+  padding-top: 10px;
+}
+
+.last {
+  margin-top: 80px;
+  width: 47%;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
 .me {
-    background: linear-gradient(var(--color-primary), transparent);
-    width: 20rem;
-    height: 20rem; /* Equal width and height to create a circle */
-    position: absolute;
-    left: calc(50% - 10rem);
-    margin-top: 3rem;
-    border-radius: 50%; /* Make it a full circle */
-    overflow: hidden;
-    padding: 5rem 1.5rem 1.5rem 1.5em;
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* ====================Scroll================== */
-.scroll_down{
-    position: absolute;
-    right: 0.5rem;
-    bottom: 5rem;
-    transform: rotate(90deg);
-    font-weight: 300;
-    font-size: .9rem;
-}
-
-/*====================MEDIA QUERY (TABLETS OR MEDIUM DEVICE) ==================================*/
-/* Updated styles for .Socials and .scroll_down on tablets */
-@media screen and (max-width: 1024px) {
-    .Socials {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start; /* Align to the left */
-      gap: 0.5rem;
-      position: absolute;
-      left: 3rem;
-      bottom: 33rem;
-    }
-  
-    .scroll_down {
-      position: absolute;
-      right: 0.5rem;
-      bottom: 3rem; /* Adjust the bottom value to position it properly */
-      transform: rotate(90deg);
-      font-weight: 300;
-      font-size: 0.9rem;
-      bottom: 35rem;
-    }
-  }
-  
-
-
-/*====================MEDIA QUERY (MBILES OR SMALL DEVICE) ==================================*/
-
-@media screen and (max-width: 600px){
-    header{
-        height: 100vh;
-    }
-    .Socials,.scroll_down{
-        display: none;
-    }
+.me img {
+  width: 100%; /* Ensure the image fits within the circle */
+  height: 100%;
+  object-fit: cover; /* Ensure proper aspect ratio */
+  border-radius: 50%; /* Match the container's border-radius */
 }

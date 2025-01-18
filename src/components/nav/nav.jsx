@@ -1,28 +1,70 @@
 import React, { useState } from 'react';
-import './nav.css';
+import './nav.css'; // You can style the navbar in this file
+import logo from '../../assets/logo.png'; // Adjust the path if needed
 
-import { AiTwotoneHome } from 'react-icons/ai';
-import { BiUser } from 'react-icons/bi';
-import { AiFillSetting } from 'react-icons/ai';
-import { GiBookshelf } from 'react-icons/gi';
-import { LiaSchoolSolid } from 'react-icons/lia';
-import { AiFillMessage } from 'react-icons/ai';
+function Nav() {
+  const [activeLink, setActiveLink] = useState('#home'); // Default active link
 
-const Nav = () => {
-  const [activeNav, setActiveNav] = useState('#');
+  const handleNavClick = (link) => {
+    setActiveLink(link); // Update active link on click
+  };
 
   return (
-    <div>
-      <nav>
-        <a href='#'onClick={() => setActiveNav('#')} className={activeNav === '#' ? 'active' : ''}><AiTwotoneHome /></a>
-        <a href='#about' onClick={() => setActiveNav('#about')} className={activeNav === '#about' ? 'active' : ''}><BiUser /></a>
-        <a href='#skills' onClick={() => setActiveNav('#skills')} className={activeNav === '#skills' ? 'active' : ''}><AiFillSetting /></a>
-        <a href='#education' onClick={() => setActiveNav('#education')} className={activeNav === '#education' ? 'active' : ''}><LiaSchoolSolid /></a>
-        <a href='#projects' onClick={() => setActiveNav('#projects')} className={activeNav === '#projects' ? 'active' : ''}><GiBookshelf /></a>
-        <a href='#contact'  onClick={() => setActiveNav('#contact')} className={activeNav === '#contact' ? 'active' : ''}><AiFillMessage /></a>
-      </nav>
-    </div>
+    <nav className="navbar">
+      {/* Add logo */}
+      <a href="#home" className="navbar-logo-link">
+        <img src={logo} alt="Logo" className="navbar-logo" />
+      </a>
+
+      <ul className="navbar-links">
+        <li>
+          <a
+            href="#home"
+            className={activeLink === '#home' ? 'active' : ''}
+            onClick={() => handleNavClick('#home')}
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="#about"
+            className={activeLink === '#about' ? 'active' : ''}
+            onClick={() => handleNavClick('#about')}
+          >
+            About
+          </a>
+        </li>
+        <li>
+          <a
+            href="#skills"
+            className={activeLink === '#skills' ? 'active' : ''}
+            onClick={() => handleNavClick('#skills')}
+          >
+            Skills
+          </a>
+        </li>
+        {/* <li>
+          <a
+            href="#projects"
+            className={activeLink === '#projects' ? 'active' : ''}
+            onClick={() => handleNavClick('#projects')}
+          >
+            Projects
+          </a>
+        </li> */}
+        <li>
+          <a
+            href="#contact"
+            className={activeLink === '#contact' ? 'active' : ''}
+            onClick={() => handleNavClick('#contact')}
+          >
+            Contact
+          </a>
+        </li>
+      </ul>
+    </nav>
   );
-};
+}
 
 export default Nav;
