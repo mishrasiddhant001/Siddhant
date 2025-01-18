@@ -144,7 +144,7 @@
 .about__card small {
     font-size: 0.7rem;
     color: var(--color-light);
-} */
+} 
 
 .about__content {
     margin: 1.2rem 0; /* Increased margin between the paragraph and cards */
