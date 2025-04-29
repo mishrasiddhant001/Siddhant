@@ -4,7 +4,7 @@ import CTA from './CTA';
 import Socials from './Socials';
 import ME from '../../assets/me.png';
 
-import logo from '../../assets/logo.png'; // Adjust the path if needed
+// import logo from '../../assets/logo.png'; // Adjust the path if needed
 
 const Header = () => {
   // Disable scrolling when the component is mounted
