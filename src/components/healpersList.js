@@ -3,14 +3,14 @@ export const skillsList = [
       label: 'Jira',
       src: 'https://i.ibb.co/QrqTVhq/unnamed.webp',
     },
-    {
-      label: 'Zephyr',
-      src: 'https://i.ibb.co/tX7R4RD/images-9.png',
-    },
-    {
-      label: 'Selenium',
-      src: 'https://i.ibb.co/5Bp7Gw5/220px-Selenium-Logo.png',
-    },
+    // {
+    //   label: 'Zephyr',
+    //   src: 'https://i.ibb.co/tX7R4RD/images-9.png',
+    // },
+    // {
+    //   label: 'Selenium',
+    //   src: 'https://i.ibb.co/5Bp7Gw5/220px-Selenium-Logo.png',
+    // },
     {
       label: 'React',
       src: 'https://i.ibb.co/4p3BhHM/images-8.png',
@@ -47,10 +47,10 @@ export const skillsList = [
       label: 'Kubernetes',
       src: 'https://i.ibb.co/R49C8Nt/Screenshot-2025-01-17-145658.png',
     },
-    {
-      label: 'Java',
-      src: 'https://i.ibb.co/zZ9ggds/Screenshot-2025-01-17-145636.png',
-    },
+    // {
+    //   label: 'Java',
+    //   src: 'https://i.ibb.co/zZ9ggds/Screenshot-2025-01-17-145636.png',
+    // },
     {
       label: 'Python',
       src: 'https://i.ibb.co/wNfW9qN/python-programming-language.jpg',
