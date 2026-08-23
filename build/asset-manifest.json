@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Siddhant/static/css/main.7fde7664.css",
-    "main.js": "/Siddhant/static/js/main.068e0ba7.js",
+    "main.js": "/Siddhant/static/js/main.fb461259.js",
     "static/media/me.png": "/Siddhant/static/media/me.b25efa6e4980d183e5df.png",
     "static/media/Resume.pdf": "/Siddhant/static/media/Resume.25083fb06a9145bc6ba7.pdf",
     "index.html": "/Siddhant/index.html",
     "main.7fde7664.css.map": "/Siddhant/static/css/main.7fde7664.css.map",
-    "main.068e0ba7.js.map": "/Siddhant/static/js/main.068e0ba7.js.map"
+    "main.fb461259.js.map": "/Siddhant/static/js/main.fb461259.js.map"
   },
   "entrypoints": [
     "static/css/main.7fde7664.css",
-    "static/js/main.068e0ba7.js"
+    "static/js/main.fb461259.js"
   ]
 }
